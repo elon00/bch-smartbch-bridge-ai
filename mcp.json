@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "bch-smartbch-bridge-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "Bitcoin Cash",
+        "PROJECT_TICKER": "BCHBRDG"
+      },
+      "tools": [
+        {
+          "name": "verify_bchbrdg_invariants",
+          "description": "Verifies deterministic invariants for BCH SmartBCH Bridge AI on Bitcoin Cash."
+        },
+        {
+          "name": "execute_bchbrdg_action",
+          "description": "Executes authenticated Bridge state transition."
+        }
+      ]
+    }
+  }
+}
